@@ -26,6 +26,4 @@ public class Greeting {
         this.content = content;
     }
 
-
-
 }
