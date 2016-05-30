@@ -22,6 +22,10 @@ class UserData {
     @Id
     @GeneratedValue
     private  Long id;
+    private String userName;
+    private String userAddress;
+    private String userBirthday;
 
+    
 
 }
