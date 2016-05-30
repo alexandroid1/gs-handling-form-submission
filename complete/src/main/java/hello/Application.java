@@ -1,27 +1,34 @@
 package hello;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
 @SpringBootApplication
 public class Application {
-
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
     }
+}
 
+@Component
+class UserCommandLineRunner implements CommandLineRunner{
+
+    @Override
+    public void run(String... args) throws Exception {
+
+    }
 }
 
 interface UserRepository extends JpaRepository<UserData, Long>{
-
     Collection<UserData> findByUserName(String userName);
-
 }
 
 @Entity
