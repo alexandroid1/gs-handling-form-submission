@@ -29,5 +29,26 @@ class UserData {
     public UserData(String userName) {
         super();
         this.userName = userName;
+        this.userAddress = userAddress;
+        this.userBirthday = userBirthday;
+    }
+
+    public UserData(){
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public String getUserAddress() {
+        return userAddress;
+    }
+
+    public String getUserBirthday() {
+        return userBirthday;
     }
 }
