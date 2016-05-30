@@ -7,6 +7,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.Collection;
+
 @SpringBootApplication
 public class Application {
 
@@ -17,6 +19,8 @@ public class Application {
 }
 
 interface UserRepository extends JpaRepository<UserData, Long>{
+
+    Collection<UserData> findByUserName(String userName);
 
 }
 
