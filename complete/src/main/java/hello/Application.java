@@ -26,6 +26,8 @@ class UserData {
     private String userAddress;
     private String userBirthday;
 
-    
-
+    public UserData(String userName) {
+        super();
+        this.userName = userName;
+    }
 }
